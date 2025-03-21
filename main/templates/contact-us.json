@@ -1,0 +1,155 @@
+{
+    "schemaVersion": "1",
+    "layout": {
+        "title": "Contact Us",
+        "steps": [{
+            "rows": [
+                {
+                    "cells": [
+                        {
+                            "title": "First Name",
+                            "type": "column",
+                            "info": {
+                                "internalName": "firstName",
+                                "type": "text"
+                            }
+                        },
+                        {
+                            "title": "Last Name",
+                            "type": "column",
+                            "info": {
+                                "internalName": "lastName",
+                                "type": "text"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "title": "Work Email",
+                            "type": "column",
+                            "grow": 3,
+                            "info": {
+                                "internalName": "email",
+                                "type": "text",
+                                "validations": [
+                                    { "name": "required" },
+                                    { "name": "email" }
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Promotions emails",
+                            "type": "column",
+                            "info": {
+                                "internalName": "optin",
+                                "type": "bool",
+                                "on": "Opted in",
+                                "off": "Opted out"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "title": "Phone number",
+                            "type": "column",
+                            "grow": 3,
+                            "info": {
+                                "internalName": "phoneNumber",
+                                "type": "text",
+                                "prefix": "#",
+                                "validations": [
+                                    { "name": "phone" }
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Promotions SMS?",
+                            "type": "column",
+                            "info": {
+                                "internalName": "optintext",
+                                "type": "bool",
+                                "on": "Opted in",
+                                "off": "Opted out"
+                            },
+                            "conditions": [
+                                { "field": "PhoneNumber", "operator": "empty", "negate": true }
+                            ],
+                            "else": { "type": "html", "html": "Enter your phone for exclusive deals!" }
+                        }
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "type": "html",
+                            "html": "You have opted in for promotional materials. These may include time-sensitive promotions and promotion codes and exclusive deals that are only available for subscribers.",
+                            "info": {
+                                "requiredRead": "I agree to receive promotional materials and exclusive deals."
+                            },
+                            "conditions": [
+                                { "field": "optin", "operator": "is", "value": "true" },
+                                { "field": "optintext", "operator": "is", "value": "true", "joinOperator": "or" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "title": "Department",
+                            "type": "column",
+                            "info": {
+                                "internalName": "department",
+                                "type": "choice",
+                                "options": [
+                                    { "key": "Account management", "value": "Account management" },
+                                    { "key": "Sales department", "value": "Sales department" },
+                                    { "key": "Technical issue", "value": "Technical issue" }
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Subject",
+                            "type": "column",
+                            "info": {
+                                "internalName": "title",
+                                "type": "text",
+                                "validations": [
+                                    {
+                                        "name": "required",
+                                        "error": "How can we help you?"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "title": "Message",
+                            "type": "column",
+                            "info": {
+                                "internalName": "message",
+                                "type": "text",
+                                "mode": "multiline",
+                                "validations": [
+                                    { "name": "required" },
+                                    {
+                                        "conditions": [{ "field": "message", "operator": "more", "value": "5", "negate": true }],
+                                        "error": "Please provide more information"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }]
+    },
+    "onSubmitMessage": "Thank you for contacting us!"
+}

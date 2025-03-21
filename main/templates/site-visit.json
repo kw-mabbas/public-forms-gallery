@@ -1,0 +1,393 @@
+{
+  "schemaVersion": "1",
+  "layout": {
+    "title": "Site Visit Form",
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Site Information</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Site Address",
+                "type": "column",
+                "info": {
+                  "internalName": "siteAddress",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Inspector Name",
+                "type": "column",
+                "info": {
+                  "internalName": "inspectorName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Date",
+                "type": "column",
+                "info": {
+                  "internalName": "inspectionDate",
+                  "type": "date",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "html": "",
+                "type": "html"
+              }
+            ]
+          }
+        ],
+        "title": "Site Information"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Progress Observation</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Describe current site conditions",
+                "type": "column",
+                "info": {
+                  "internalName": "siteConditionDescription",
+                  "type": "text",
+                  "mode": "multiline",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Site condition image(s)",
+                "type": "column",
+                "info": {
+                  "internalName": "siteImages",
+                  "type": "file",
+                  "isMulti": true,
+                  "fileTypes": [
+                    "png",
+                    "jpg",
+                    "gif",
+                    "bmp",
+                    "svg",
+                    "webp"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Progress Information"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Safety Hazards</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Did you see any safety violations?",
+                "type": "column",
+                "info": {
+                  "internalName": "safetyViolation1",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Upload violation here",
+                "type": "column",
+                "info": {
+                  "internalName": "violationImage1",
+                  "type": "canvas",
+                  "allowFullScreen": true,
+                  "allowUpload": true
+                },
+                "conditions": [
+                  {
+                    "field": "SafetyViolation1",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Did you see any other safety violations?",
+                "type": "column",
+                "info": {
+                  "internalName": "safetyViolation2",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No"
+                },
+                "conditions": [
+                  {
+                    "field": "SafetyViolation1",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Upload violation here",
+                "type": "column",
+                "info": {
+                  "internalName": "violationImage2",
+                  "type": "canvas",
+                  "allowFullScreen": true,
+                  "allowUpload": true
+                },
+                "conditions": [
+                  {
+                    "field": "SafetyViolation2",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Did you see any other safety violations?",
+                "type": "column",
+                "info": {
+                  "internalName": "safetyViolation3",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No"
+                },
+                "conditions": [
+                  {
+                    "field": "SafetyViolation2",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Upload violation here",
+                "type": "column",
+                "info": {
+                  "internalName": "violationImage2",
+                  "type": "canvas",
+                  "allowFullScreen": true,
+                  "allowUpload": true
+                },
+                "conditions": [
+                  {
+                    "field": "SafetyViolation3",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "title": "Safety Hazards"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Reporting</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Summary of Findings",
+                "type": "column",
+                "info": {
+                  "internalName": "findingsSummary",
+                  "type": "text",
+                  "mode": "multiline",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Site Rating",
+                "type": "column",
+                "info": {
+                  "internalName": "siteRating",
+                  "type": "choice",
+                  "options": [
+                    {
+                      "key": "1",
+                      "value": "1"
+                    },
+                    {
+                      "key": "2",
+                      "value": "2"
+                    },
+                    {
+                      "key": "3",
+                      "value": "3"
+                    },
+                    {
+                      "key": "4",
+                      "value": "4"
+                    },
+                    {
+                      "key": "5",
+                      "value": "5"
+                    }
+                  ],
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "html": "",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Site Manager",
+                "type": "column",
+                "info": {
+                  "internalName": "siteManagerSignature",
+                  "type": "canvas",
+                  "height": 200,
+                  "width": 200,
+                  "allowFullScreen": true,
+                  "allowSigning": true,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
+                }
+              },
+              {
+                "title": "Inspector",
+                "type": "column",
+                "info": {
+                  "internalName": "siteManagerSignature",
+                  "type": "canvas",
+                  "height": 200,
+                  "width": 200,
+                  "allowFullScreen": true,
+                  "allowSigning": true,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Reporting"
+      }
+    ]
+  },
+  "onSubmitMessage": "Thank you for contacting us!"
+}

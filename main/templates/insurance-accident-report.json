@@ -1,0 +1,798 @@
+{
+  "schemaVersion": "1",
+  "layout": {
+    "title": "Insurance Accident Report",
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Driver</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Full Name",
+                "type": "column",
+                "info": {
+                  "internalName": "firstName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "License Level",
+                "type": "column",
+                "info": {
+                  "internalName": "licenseLevel",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Years of Driving Experience",
+                "type": "column",
+                "info": {
+                  "internalName": "drivingExperience",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Start of Coverage",
+                "type": "column",
+                "info": {
+                  "internalName": "coverageStart",
+                  "type": "date",
+                  "showTime": false
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Policy Number",
+                "type": "column",
+                "info": {
+                  "internalName": "policyNumber",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Cell Number",
+                "type": "column",
+                "info": {
+                  "internalName": "cellNumber",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    },
+                    {
+                      "name": "phone"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Email",
+                "type": "column",
+                "info": {
+                  "internalName": "email",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    },
+                    {
+                      "name": "email"
+                    }
+                  ]
+                }
+              },
+              {
+                "html": "",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "html",
+                "html": "",
+                "info": {
+                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Driver Information"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Vehicle</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Vehicle Make",
+                "type": "column",
+                "info": {
+                  "internalName": "vehicleMake",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Vehicle Model",
+                "type": "column",
+                "info": {
+                  "internalName": "vehicleModel",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Vehicle Color",
+                "type": "column",
+                "info": {
+                  "internalName": "vehicleColor",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Vehicle Year",
+                "type": "column",
+                "info": {
+                  "internalName": "vehicleYear",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "License Plate",
+                "type": "column",
+                "info": {
+                  "internalName": "licensePlate",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Vehicle Identification Number (VIN)",
+                "type": "column",
+                "info": {
+                  "internalName": "vehicleIDNum",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "",
+                "type": "html",
+                "info": {
+                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Insured Vehicle Information"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Involved Parties</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Was there another party involved in the accident?",
+                "type": "column",
+                "info": {
+                  "internalName": "anotherParty",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No"
+                }
+              },
+              {
+                "title": "Full Name",
+                "type": "column",
+                "info": {
+                  "internalName": "otherPartyName",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Other Vehicle Make",
+                "type": "column",
+                "info": {
+                  "internalName": "otherCarMake",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Other Vehicle Model",
+                "type": "column",
+                "info": {
+                  "internalName": "otherCarModel",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Other Vehicle License Plate",
+                "type": "column",
+                "info": {
+                  "internalName": "otherCarLicense",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Other Vehicle Identification Number",
+                "type": "column",
+                "info": {
+                  "internalName": "otherVIN",
+                  "type": "number"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Insurance Policy Provider",
+                "type": "column",
+                "info": {
+                  "internalName": "policyProvider",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Other Insurance Policy Number",
+                "type": "column",
+                "info": {
+                  "internalName": "otherPolicyNumber",
+                  "type": "number"
+                },
+                "conditions": [
+                  {
+                    "field": "AnotherParty",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "",
+                "type": "html",
+                "info": {
+                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Involved Parties"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Accident Details</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Date & Time",
+                "type": "column",
+                "info": {
+                  "internalName": "dateOfAccident",
+                  "type": "date",
+                  "showTime": true,
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Location",
+                "type": "column",
+                "info": {
+                  "internalName": "accidentLocation",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Weather Conditions",
+                "type": "column",
+                "info": {
+                  "internalName": "weatherConditions",
+                  "type": "choice",
+                  "options": [
+                    {
+                      "key": "Choice A",
+                      "value": "Choice A"
+                    },
+                    {
+                      "key": "Choice B",
+                      "value": "Choice B"
+                    },
+                    {
+                      "key": "Choice C",
+                      "value": "Choice C"
+                    },
+                    {
+                      "key": "Choice D",
+                      "value": "Choice D"
+                    },
+                    {
+                      "key": "Choice E",
+                      "value": "Choice E"
+                    }
+                  ],
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Road Conditions",
+                "type": "column",
+                "info": {
+                  "internalName": "roadConditions",
+                  "type": "choice",
+                  "options": [
+                    {
+                      "key": "Choice A",
+                      "value": "Choice A"
+                    },
+                    {
+                      "key": "Choice B",
+                      "value": "Choice B"
+                    },
+                    {
+                      "key": "Choice C",
+                      "value": "Choice C"
+                    },
+                    {
+                      "key": "Choice D",
+                      "value": "Choice D"
+                    },
+                    {
+                      "key": "Choice E",
+                      "value": "Choice E"
+                    }
+                  ],
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Estimated Damage",
+                "type": "column",
+                "info": {
+                  "internalName": "estimatedDamage",
+                  "type": "number",
+                  "suffix": "$",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Were there any witnesses?",
+                "type": "column",
+                "info": {
+                  "internalName": "witnesses",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Witness Name",
+                "type": "column",
+                "info": {
+                  "type": "text",
+                  "internalName": "witnessName"
+                },
+                "conditions": [
+                  {
+                    "field": "Witnesses",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Witness phone number",
+                "type": "column",
+                "info": {
+                  "type": "number",
+                  "internalName": "witnessPhoneNumber",
+                  "validations": [
+                    {
+                      "name": "phone"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "Witnesses",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Witness email",
+                "type": "column",
+                "info": {
+                  "type": "text",
+                  "internalName": "witnessEmail",
+                  "validations": [
+                    {
+                      "name": "email"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "Witnesses",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Were police involved?",
+                "type": "column",
+                "info": {
+                  "internalName": "werePoliceInvolved",
+                  "type": "bool",
+                  "on": "Yes",
+                  "off": "No",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Police Report Number",
+                "type": "column",
+                "info": {
+                  "internalName": "policeReportNumber",
+                  "type": "number"
+                },
+                "conditions": [
+                  {
+                    "field": "Witnesses",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "",
+                "type": "html",
+                "info": {
+                  "requiredRead": "I verify that I have read the content above and that the entered information is accurate"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Accident Details"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<h2><span style=\"color: rgb(74, 134, 232);\">Description</span><br></h2>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "html": "<hr />",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Description of Accident",
+                "type": "column",
+                "info": {
+                  "internalName": "accidentDescription",
+                  "type": "text",
+                  "mode": "multiline",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Label where the damage occured (Fullscreen as necessary)",
+                "type": "column",
+                "info": {
+                  "internalName": "carCanvas",
+                  "type": "canvas",
+                  "height": 500,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/car/car-diagram-transparent.png",
+                  "allowFullScreen": true
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Image(s) of accident",
+                "type": "column",
+                "info": {
+                  "internalName": "accidentImages",
+                  "type": "file",
+                  "isMulti": true,
+                  "fileTypes": [
+                    "png",
+                    "jpg",
+                    "gif",
+                    "bmp",
+                    "svg",
+                    "webp"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "I hereby certify that the information provided in this report is true and accurate to the best of my knowledge. I understand that any false or misleading statements may affect the result of my claim and result in potential legal consequences.",
+                "type": "column",
+                "info": {
+                  "internalName": "signature",
+                  "type": "canvas",
+                  "height": 200,
+                  "width": 200,
+                  "allowFullScreen": true,
+                  "allowSigning": true,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Accident Description"
+      }
+    ]
+  },
+  "onSubmitMessage": "Your request has been submitted."
+}

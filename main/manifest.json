@@ -1,0 +1,9 @@
+[
+    { "title": "Contact form", "description": "A simple 'contact us' form", "fileName": "contact-us.json", "category": "Outreach"},
+    { "title": "Job application", "description": "Allow candidates to submit CVs", "fileName": "job-application.json", "category": "Outreach"},
+    { "title": "Car rental", "description": "Car rental inspection form", "fileName": "car-rental.json", "category": "Automotive"},
+    { "title": "Job safety", "description": "Log safety concerns on your job site", "fileName": "job-safety.json", "category": "Worksite"},
+    { "title": "Insurance Accident Template", "description": "Report collisions to your insurance provider", "fileName": "insurance-accident-report.json", "category": "Automotive"},
+    { "title": "Site Visit", "description": "Report on Site Updates and Safety Hazards", "fileName": "site-visit.json", "category": "Worksite"},
+    { "title": "Patient Intake Form Template", "description": "Receive patient information before a doctors appointment", "fileName": "patient-intake.json", "category": "Healthcare"}
+]

@@ -1,0 +1,665 @@
+{
+  "schemaVersion": "1",
+  "layout": {
+    "title": "Patient Intake Form",
+    "steps": [
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "First Name",
+                "type": "column",
+                "info": {
+                  "internalName": "firstName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Last Name",
+                "type": "column",
+                "info": {
+                  "internalName": "lastName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Date of Birth",
+                "type": "column",
+                "info": {
+                  "type": "date",
+                  "internalName": "dateOfBirth",
+                  "showTime": false,
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Address",
+                "type": "column",
+                "info": {
+                  "type": "text",
+                  "internalName": "patientAddress",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "email",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    },
+                    {
+                      "name": "email"
+                    }
+                  ]
+                },
+                "title": "Email",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "phoneNumber",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    },
+                    {
+                      "name": "phone"
+                    }
+                  ]
+                },
+                "title": "Phone number",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "html",
+                "html": "",
+                "info": {
+                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Patient Information Form"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Do you have health insurance",
+                "type": "column",
+                "info": {
+                  "internalName": "healthInsuranceCheck",
+                  "type": "bool",
+                  "off": "No",
+                  "on": "Yes"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Insurance Provider Name",
+                "type": "column",
+                "info": {
+                  "internalName": "providerName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Policy Number",
+                "type": "column",
+                "info": {
+                  "internalName": "policyNumber",
+                  "type": "number",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Pharmacy Benefit Plan Information",
+                "type": "column",
+                "info": {
+                  "internalName": "benefitPlanInfo",
+                  "type": "text"
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Deductible Amount",
+                "type": "column",
+                "info": {
+                  "internalName": "deductibleAmount",
+                  "type": "number",
+                  "suffix": "$"
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Insurance Start Date",
+                "type": "column",
+                "info": {
+                  "internalName": "insuranceStartDate",
+                  "type": "date",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Plan Type",
+                "type": "column",
+                "info": {
+                  "internalName": "planType",
+                  "type": "choice",
+                  "options": [
+                    {
+                      "key": "Choice A",
+                      "value": "Choice A"
+                    },
+                    {
+                      "key": "Choice B",
+                      "value": "Choice B"
+                    },
+                    {
+                      "key": "Choice C",
+                      "value": "Choice C"
+                    },
+                    {
+                      "key": "Choice D",
+                      "value": "Choice D"
+                    },
+                    {
+                      "key": "Choice E",
+                      "value": "Choice E"
+                    }
+                  ],
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "HealthInsuranceCheck",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "html",
+                "html": "",
+                "info": {
+                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Insurance Information"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Full Name",
+                "type": "column",
+                "info": {
+                  "internalName": "emergencyContactName",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Relationship",
+                "type": "column",
+                "info": {
+                  "internalName": "emergencyContactRelationship",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "info": {
+                  "internalName": "emergencyContactEmail",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "required"
+                    },
+                    {
+                      "name": "email"
+                    }
+                  ]
+                },
+                "title": "Email",
+                "type": "column"
+              },
+              {
+                "info": {
+                  "internalName": "emergencyContactPhoneNumber",
+                  "type": "text",
+                  "validations": [
+                    {
+                      "name": "phone"
+                    },
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "title": "Phone number",
+                "type": "column"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "html",
+                "html": "",
+                "info": {
+                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Emergency Contact Info"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Would you like to use metric or imperial units",
+                "type": "column",
+                "info": {
+                  "internalName": "unitChoice",
+                  "type": "bool",
+                  "off": "Imperial",
+                  "on": "Metric"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Height",
+                "type": "column",
+                "info": {
+                  "internalName": "imperialHeight",
+                  "type": "number",
+                  "suffix": "ft & in.",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "checked"
+                  },
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "true",
+                    "negate": true,
+                    "joinOperator": "or"
+                  }
+                ]
+              },
+              {
+                "title": "Weight",
+                "type": "column",
+                "info": {
+                  "internalName": "imperialWeight",
+                  "type": "number",
+                  "suffix": "lbs",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "checked"
+                  },
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "true",
+                    "negate": true,
+                    "joinOperator": "or"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Height",
+                "type": "column",
+                "info": {
+                  "internalName": "metricHeight",
+                  "type": "number",
+                  "suffix": "cm",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              },
+              {
+                "title": "Weight",
+                "type": "column",
+                "info": {
+                  "internalName": "metricWeight",
+                  "type": "number",
+                  "suffix": "kg",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "UnitChoice",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Do you have any pre-existing medical conditions?",
+                "type": "column",
+                "info": {
+                  "internalName": "existingConditionsQuestion",
+                  "type": "bool",
+                  "off": "No",
+                  "on": "Yes"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Describe your pre-existing conditions",
+                "type": "column",
+                "info": {
+                  "internalName": "exisitngConditionsAnswer",
+                  "type": "text",
+                  "mode": "multiline",
+                  "validations": [
+                    {
+                      "name": "required"
+                    }
+                  ]
+                },
+                "conditions": [
+                  {
+                    "field": "ExistingConditionsQuestion",
+                    "operator": "is",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "html",
+                "html": "",
+                "info": {
+                  "requiredRead": "I acknowledge that I have read and reviewed all the information provided in this form. I confirm that the details entered are true, complete, and accurate to the best of my knowledge"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Medical History"
+      },
+      {
+        "rows": [
+          {
+            "cells": [
+              {
+                "html": "<p><img src=\"https://img.freepik.com/premium-vector/blend-thin-line-blue-white-abstract-memphis-geometric-wide-banner-design-background_181182-21845.jpg\" style=\"width: 100%; height: 100px; vertical-align: bottom;\"></p><p><br></p><p><br></p>",
+                "type": "html"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Describe your issue",
+                "type": "column",
+                "info": {
+                  "internalName": "issueDescription",
+                  "type": "text",
+                  "mode": "multiline"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "Use this diagram to aid your description (Fullscreen as necessary)",
+                "type": "column",
+                "info": {
+                  "internalName": "diagramAid",
+                  "type": "canvas",
+                  "height": 300,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/body-frontal/body-frontal-diagram-transparent.png",
+                  "allowFullScreen": true
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "If it would be useful, submit a picture of your wound",
+                "type": "column",
+                "info": {
+                  "internalName": "woundImage",
+                  "type": "file",
+                  "isMulti": true,
+                  "fileTypes": [
+                    "png",
+                    "jpg",
+                    "gif",
+                    "bmp",
+                    "svg",
+                    "webp"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "title": "I state that I fully understood all the questions, received needed explanations and that the data in this questionnaire is authentic",
+                "type": "column",
+                "info": {
+                  "internalName": "signature",
+                  "type": "canvas",
+                  "height": 200,
+                  "width": 200,
+                  "allowFullScreen": true,
+                  "allowSigning": true,
+                  "defaultValue": "https://apps.kwizcom.com/products/apsig/images/diagrams/signature/signature-diagram-transparent.png"
+                }
+              }
+            ]
+          }
+        ],
+        "title": "Visual Aid"
+      }
+    ]
+  },
+  "onSubmitMessage": "Thank you for contacting us!"
+}

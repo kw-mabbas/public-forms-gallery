@@ -1,0 +1,99 @@
+{
+    "schemaVersion": "1",
+    "layout": {
+        "steps": [
+            {
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "html": "<p><strong>Report safety concerns on your job site</strong></p><p>Please click the upload button to the right of the canvas, and draw on the picture.</p>",
+                                "type": "html"
+                            }
+                        ]
+                    },
+                    {
+                        "hidden": true,
+                        "cells": [
+                            {
+                                "title": "Title",
+                                "type": "column",
+                                "info": {
+                                    "internalName": "title",
+                                    "type": "text",
+                                    "defaultValue": "[Severity] [JobID] [Location]"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "info": {
+                                    "internalName": "jobID",
+                                    "type": "text",
+                                    "validations": [{ "name": "required" }]
+                                },
+                                "title": "Job ID",
+                                "type": "column"
+                            },
+                            {
+                                "info": {
+                                    "internalName": "location",
+                                    "type": "text"
+                                },
+                                "title": "Location",
+                                "type": "column"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "info": {
+                                    "internalName": "severity",
+                                    "defaultValue": "Normal",
+                                    "isMulti": false,
+                                    "options": [
+                                        {
+                                            "key": "Normal",
+                                            "value": "Normal"
+                                        },
+                                        {
+                                            "key": "High",
+                                            "value": "High"
+                                        },
+                                        {
+                                            "key": "Urgent",
+                                            "value": "Urgent"
+                                        }
+                                    ],
+                                    "type": "choice",
+                                    "validations": [{ "name": "required" }]
+                                },
+                                "title": "Severity",
+                                "type": "column"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "info": {
+                                    "allowFullScreen": true,
+                                    "allowUpload": true,
+                                    "height": 500,
+                                    "internalName": "diagram",
+                                    "type": "canvas"
+                                },
+                                "title": "Picture",
+                                "type": "column"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "onSubmitMessage": "Your request has been submitted."
+}
