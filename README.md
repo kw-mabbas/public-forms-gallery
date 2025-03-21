@@ -1,3 +1,17 @@
+# Public forms templates gallery
+These templates are part of the KWIZ Forms public-forms product feature.
+
+More info on KWIZ Forms:
+https://kwizcom.com/kwiz-forms/
+
+More info on public forms:
+https://docs.kwizcom.com/link/535/documentation-forms-features-public-forms
+
+This project and license covers the free use rights for the templates.
+Using these templates within KWIZ Forms / Public Forms requires a license for KWIZ Forms.
+
+Customers may fork this repo and create their own gellery following the instructions below:
+
 ## Template Creation Process:
 
 -   Create the form in form designer 
