@@ -2,6 +2,10 @@
     "schemaVersion": "1",
     "layout": {
         "title": "Contact Us",
+                "steps": [{
+            "rows": [
+                {
+                    "cells": [
                         {
                             "title": "First Name",
                             "type": "column",
